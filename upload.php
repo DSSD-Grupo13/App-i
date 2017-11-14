@@ -25,7 +25,7 @@ $ch = curl_init("https://content.dropboxapi.com/2/files/upload");
       curl_setopt($ch, CURLOPT_INFILE, $fp);
       curl_setopt($ch, CURLOPT_INFILESIZE, filesize(realpath($targetFile)));
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $app = "/grupo13dssd/";
+      $app = "/dssdgrupo13/";
       $path = $app.$storeFolder;
       echo $storeFolder;
       $dropbox_key = "YI0Ljfi3WFAAAAAAAAAAE7s8maUl_O2iNz28h3Ptb-xgrCAcWMvhz_CtmDd_49Tz";
