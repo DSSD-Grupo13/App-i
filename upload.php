@@ -28,7 +28,7 @@ $ch = curl_init("https://content.dropboxapi.com/2/files/upload");
       $app = "/grupo13dssd/";
       $path = $app.$storeFolder;
       echo $storeFolder;
-      $dropbox_key = "YI0Ljfi3WFAAAAAAAAAAEmBs4wrpw14xH6Nkq3MxKswKAW1XJijhs2SuNTo1Tunn";
+      $dropbox_key = "YI0Ljfi3WFAAAAAAAAAAE7s8maUl_O2iNz28h3Ptb-xgrCAcWMvhz_CtmDd_49Tz";
       $headers = array();
       $headers[] = "Authorization: Bearer " . $dropbox_key;
       $headers[] = "Dropbox-Api-Arg: {\"path\": \"" . $path . "\",\"mode\": \"add\",\"autorename\":true,\"mute\": false}";
