@@ -1,14 +1,10 @@
 <?php
-$ds          = DIRECTORY_SEPARATOR;  //1
 
-$usuario=$_POST['nomUsuario'];
-$incidente=$_POST['idIncidente'];
-$carpeta=$usuario.$incidente;
-  if (!file_exists($carpeta)) {
-      mkdir($carpeta, 0777, true);
+$ds= DIRECTORY_SEPARATOR;  //1
+$storeFolder= $_POST['nomUsuario'].$_POST['idIncidente'];
+if (!file_exists($storeFolder)){
+	mkdir($storeFolder, 0755, true);
 }
-$storeFolder = $carpeta;   //2
-
 if (!empty($_FILES)) {
 
     $tempFile = $_FILES['file']['tmp_name'];          //3
@@ -20,4 +16,4 @@ if (!empty($_FILES)) {
     move_uploaded_file($tempFile,$targetFile); //6
 
 }
-?>
+?>  
