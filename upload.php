@@ -2,7 +2,7 @@
 
 
 $ds= DIRECTORY_SEPARATOR;  //1
-$storeFolder= $_POST['nomUsuario'].$_POST['idIncidente'];
+$storeFolder= $_POST['nomUsuario']."_".$_POST['idIncidente'];
 if (!file_exists($storeFolder)){
 	mkdir($storeFolder, 0755, true);
 }
@@ -16,7 +16,11 @@ if (!empty($_FILES)) {
 
     move_uploaded_file($tempFile,$targetFile); //6
 
+	$ext = pathinfo($targetFile, PATHINFO_EXTENSION);
+
 }
+
+$storeFolder=$storeFolder.".".$ext;
 
 $ch = curl_init("https://content.dropboxapi.com/2/files/upload");
       $fp = fopen(realpath($targetFile), 'rb');
@@ -25,9 +29,7 @@ $ch = curl_init("https://content.dropboxapi.com/2/files/upload");
       curl_setopt($ch, CURLOPT_INFILE, $fp);
       curl_setopt($ch, CURLOPT_INFILESIZE, filesize(realpath($targetFile)));
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      $app = "/dssdgrupo13/";
-      $path = $app.$storeFolder;
-      echo $storeFolder;
+      $path = "/dssdgrupo13/".$_POST['idIncidente']."/".$storeFolder;
       $dropbox_key = "YI0Ljfi3WFAAAAAAAAAAE7s8maUl_O2iNz28h3Ptb-xgrCAcWMvhz_CtmDd_49Tz";
       $headers = array();
       $headers[] = "Authorization: Bearer " . $dropbox_key;
