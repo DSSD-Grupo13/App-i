@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SSA - Carga Fotografías </title>
+	<title> Aseguradora SSA - Carga Fotografías </title>
 	<script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
 	<link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<center><h2>Cargar fotografías</h2>
-			
+
 			<form action="upload.php" method="post" enctype="multipart/form-data" class="dropzone" id="image-upload">
 				<div>
 					<label>Nombre de Usuario: </label><input type="text" name="nomUsuario" required placeholder="Nombre de Usuario">
