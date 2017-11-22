@@ -16,7 +16,7 @@
 
 			<form action="upload.php" method="post" enctype="multipart/form-data" class="dropzone" id="image-upload">
 				<div>
-	<label>Id del Incidente: </label><input type="number" name="idIncidente" placeholder=<?php echo $_GET['id'];?> value=<?php echo $_GET['id'];?>>
+	<label>Id del Incidente: </label><input type="text" name="idIncidente" placeholder=<?php echo $_GET['id'];?> value=<?php echo $_GET['id'];?> disabled>
 					<h4>Elige las imágenes a cargar</h>
 				</div>
 			</form>
